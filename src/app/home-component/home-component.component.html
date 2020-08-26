@@ -1,0 +1,120 @@
+<div class="shoppingApp">
+    <ngx-spinner   bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+    <div class="row">
+        <div class="col-md-12 topBar">
+            <div class="row">
+                <div class="col-md-6 navBarClass"><span class="menuIcon" (click)="openCloseSideBar()">
+                        &#9776;</span>
+                    <span (click)="showMainPage()">HOME</span>
+                    <span>SHOP</span>
+                    <span>MAGAZINE</span>
+                </div>
+                <div class="col-md-6 navBarClass2">
+                        <input placeholder="Search here........." type="text">
+                        <img style="zoom: 0.2;" src="../../assets/shoppingcart.png">
+                        &nbsp;&nbsp;LOGIN
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row" *ngIf="!showDetailesPage && !noResults">
+        <div class="col-md-2" *ngIf="!hideSideNav">
+            <span class="filterClass">FILTER BY</span>
+            <div class="listItems">
+                <p id = "list1" style="cursor: pointer;" (click)="openList1()">Collections</p>
+                <ol id="ollist" style="display: none;cursor: pointer;">
+                  <li (click)="showNoData()"><a>Chair</a></li>
+                  <li (click)="showNoData()"><a>Cot</a></li>
+                  <li (click)="showNoData()"><a>Windows</a></li>
+                  <li (click)="showNoData()"><a>Design Models</a></li>
+                </ol>
+             </div>
+             <div class="listItems">
+                <p id = "list2" style="cursor: pointer;" (click)="openList2()">Color</p>
+                <ol id="ollist2" style="display: none;cursor: pointer;">
+                    <li><a>Blue</a></li>
+                    <li><a>Black</a></li>
+                    <li><a>Voilet</a></li>
+                    <li><a>White</a></li>
+                </ol>
+             </div>
+             <div class="listItems">
+                <p id = "list3" style="cursor: pointer;" (click)="openList3()">Category</p>
+                <ol id="ollist3" style="display: none;cursor: pointer;">
+                    <li><a>Interiors</a></li>
+                    <li><a>Exteriors</a></li>
+                    
+                </ol>
+             </div>
+             <div class="slidecontainer">
+               <span style="position: relative;left: 20px;"> <input type="range" min="1300" max="100000" value="50"></span><br>
+                <span>$1300</span><span style="float: right;">$10000+</span>
+              </div>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-4" *ngFor ="let furnitures of furnituresData">
+
+               
+            <div  class="card" style="width: 18rem;cursor: pointer;" (click)="showDetailedPage(furnitures)">
+                <img class="card-img-top" src={{furnitures.src}} alt="Card image cap">
+                <div class="card-body">
+                    <span>{{furnitures.name}}</span>
+                   <div class="tags"> 
+                       <img style="height: 24px;width: 50px;" src="../../assets/shoppingcart.png">
+                    <div class="price">${{furnitures.price}}</div>
+                </div>
+                </div>
+               
+              </div>
+              <br>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="row" *ngIf="showDetailesPage && !noResults">
+      <div class="col-md-12">
+          <span style="font-size: 55px;cursor: pointer;" (click)="showMainPage()">&#8592;</span>
+      </div>
+      <div class="col-md-12">
+          <div class="row">
+              <div class="col-md-6" style="position: relative;left: 200px;">
+                <img style="width: 60%;" src={{selectedFurniture.src}} >
+              </div>
+              <div class="col-md-6">
+                  <h2>{{selectedFurniture.name}}</h2>
+                  <br>
+                  <p>{{selectedFurniture.description}}</p>
+                  <p style="font-size: 15px;color: #0000006b;">color</p>
+                  <div class="colordiv" style="display: flex;"><div class="color"></div>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <div class="color1"></div></div>
+                  <p style="font-size: 15px;color: #0000006b;"  >Price per unit</p>
+                  <div class="bottombox">
+                      <b>${{selectedFurniture.price}}</b>&nbsp;&nbsp;&nbsp;&nbsp;
+                      <button type="button" class="btn btn-dark">Buy Now</button>
+                      <img style="zoom: 0.2;" src="../../assets/shoppingcart.png">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="row" *ngIf="noResults">
+        <div class="col-md-12">
+            <span style="font-size: 55px;cursor: pointer;" (click)="showMainPage()">&#8592;</span>
+        </div>
+        <div class="row" style="width: 100%;">
+
+        <div class="col-md-6">
+
+        </div>
+        <div class="col-md-6">
+
+            <div class="results" ><b>No Results!...</b>
+        </div>
+        
+        </div>
+        </div>
+    </div>
+</div>

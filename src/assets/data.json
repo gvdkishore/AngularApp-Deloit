@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "src": "../../assets/furniture1.jpg",
+      "name": "Coombes",
+      "price": 2600,
+      "description": "Are you ready to talk furniture? Whether yours is beautifully antique, handily thrifted, desperately-purchased-when-you-realized-you-had-nothing-to-sit-on, or of any other furniture variety, you have it. And if you're a word lover, you can class up the joint and maybe even impress a few guests with some detailed knowledge about your stuff! Or the stuff at that fancy hotel you try to stay in once a year. To help you get started, here's a list of 23 fabulous terms to describe furniture, and many other items of decor you might have"
+    },
+    {
+      "id": 2,
+      "src": "../../assets/furniture2.jpg",
+      "name": "keeve Set",
+      "price": 890,
+      "description": "Are you ready to talk furniture? Whether yours is beautifully antique, handily thrifted, desperately-purchased-when-you-realized-you-had-nothing-to-sit-on, or of any other furniture variety, you have it. And if you're a word lover, you can class up the joint and maybe even impress a few guests with some detailed knowledge about your stuff! Or the stuff at that fancy hotel you try to stay in once a year. To help you get started, here's a list of 23 fabulous terms to describe furniture, and many other items of decor you might have"
+    
+    },
+    {
+      "id": 3,
+      "src": "../../assets/furniture3.jpg",
+      "name": "Nille",
+      "price": 5600,
+      "description": "Are you ready to talk furniture? Whether yours is beautifully antique, handily thrifted, desperately-purchased-when-you-realized-you-had-nothing-to-sit-on, or of any other furniture variety, you have it. And if you're a word lover, you can class up the joint and maybe even impress a few guests with some detailed knowledge about your stuff! Or the stuff at that fancy hotel you try to stay in once a year. To help you get started, here's a list of 23 fabulous terms to describe furniture, and many other items of decor you might have"
+    
+    },
+    {
+      "id": 4,
+      "src": "../../assets/furniture4.jpg",
+      "name": "Momo",
+      "price": 8900,
+      "description": "Are you ready to talk furniture? Whether yours is beautifully antique, handily thrifted, desperately-purchased-when-you-realized-you-had-nothing-to-sit-on, or of any other furniture variety, you have it. And if you're a word lover, you can class up the joint and maybe even impress a few guests with some detailed knowledge about your stuff! Or the stuff at that fancy hotel you try to stay in once a year. To help you get started, here's a list of 23 fabulous terms to describe furniture, and many other items of decor you might have"
+    
+    }
+  ]
